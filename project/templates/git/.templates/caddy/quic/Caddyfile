@@ -1,0 +1,16 @@
+{
+  debug
+  servers :443 {
+    protocol {
+      experimental_http3
+    }
+  }
+}
+
+https://localhost:443 {
+	file_server browse
+	tls ./localhost.pem ./localhost-key.pem
+	protocol {
+      experimental_http3
+    }
+}

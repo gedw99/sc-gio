@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"tile": "root",
+			"path": "./"
+		},
+		{
+			"tile": "code",
+			"path": "./gio-example/markdown"
+		}
+	],
+	"settings": {
+		"makefile.extensionOutputFolder": "./.vscode"
+	}
+}

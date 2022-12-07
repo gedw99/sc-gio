@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"name": "root",
+			"path": "./"
+		},
+		{
+			"name": "code-origin",
+			"path": "./gitty-origin/skel"
+		},
+		{
+			"name": "code-upstream",
+			"path": "./gitty-upstream/skel"
+		}
+	],
+	"settings": {
+		"makefile.extensionOutputFolder": "./.vscode"
+	}
+}

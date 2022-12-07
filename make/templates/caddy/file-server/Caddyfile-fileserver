@@ -1,0 +1,4 @@
+https://localhost:443 {
+	file_server browse
+	tls ./localhost.pem ./localhost-key.pem
+}

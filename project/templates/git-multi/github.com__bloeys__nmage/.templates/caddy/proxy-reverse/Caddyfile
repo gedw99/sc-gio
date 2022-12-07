@@ -1,0 +1,7 @@
+https://localhost:443 {
+	proxy / webauthn:9005 {
+		transparent
+		fail_timeout 0s
+	}
+	tls ./localhost.pem ./localhost-key.pem
+}

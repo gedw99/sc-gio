@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"name": "root",
+			"path": "./"
+		},
+		{
+			"name": "code-origin",
+			"path": "./gitty-origin/nmage"
+		},
+		{
+			"name": "code-upstream",
+			"path": "./gitty-upstream/nmage"
+		}
+	],
+	"settings": {
+		"makefile.extensionOutputFolder": "./.vscode"
+	}
+}

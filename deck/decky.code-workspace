@@ -1,0 +1,30 @@
+{
+	"folders": [
+		
+		{
+			"path": "./_make"
+		},
+		{
+			"path": "./.bin"
+		},
+		{
+			"path": "./deck"
+		},
+		{
+			"path": "./deckfonts"
+		},
+		{
+			"path": "./decksh"
+		},
+		{
+			"path": "./deckviz"
+		},
+		{
+			"path": "./dubois-data-portraits"
+		},
+		{
+			"path": "./giocanvas"
+		},
+	],
+	"settings": {}
+}

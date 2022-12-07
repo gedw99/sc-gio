@@ -1,0 +1,15 @@
+{
+	debug
+	ocsp_stapling off
+	servers :443 {
+		protocol {
+			allow_h2c
+			experimental_http3
+		}
+	}
+}
+
+https://localhost:8443 {
+	file_server browse
+	tls ./localhost.pem ./localhost-key.pem
+}
