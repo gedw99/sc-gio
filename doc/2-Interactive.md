@@ -2,10 +2,10 @@
 
 Now we just want to add interactiving
 
-- slides are static.
+- slides are static, but we need to be able to do thngs like rect click --> collect form data --> post to channel.
 
 - but we need them to be interactive.
 
 - htmx is the way to do it. https://htmx.org 
 
-- one example is https://github.com/flaticols/gomponents-htmx
+- there are various golang implemenations
