@@ -1,4 +1,8 @@
-# xml reflection
+# 4-xml 
+
+xml reflection in Deck is a problem for tinygo.
+
+## Problem
 
 https://github.com/ajstarks/deck/blob/master/deck.go#L5:
 ``` 
@@ -7,10 +11,12 @@ import (
 	"encoding/xml"
 ```
 
-## Problem
-
 - web: cant compile with tinygo
 - web: huge wasm binary 
+
+The whole of https://github.com/ajstarks/deck/blob/master/deck.go would need to be rewritten.
+
+
 
 ## Solutions
 
@@ -21,6 +27,7 @@ https://github.com/clbanning/mxj
 - good enough for hugo :) https://github.com/gohugoio/hugo/pull/9044
   - also shows how 3-web-dom could be solved. deckxml --> hugo
 
+- 
 
 ---
 

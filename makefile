@@ -3,6 +3,10 @@
 MAKE_FSPATH=$(PWD)/make
 include $(MAKE_FSPATH)/help.mk
 
+GIO_MAKE_BIN_FSPATH=$(GOPATH)/bin
+GIO_MAKE_BIN_NAME=gio-make
+GIO_MAKE_BIN=$(GIO_MAKE_BIN_FSPATH)/$(GIO_MAKE_BIN_NAME)
+
 
 print:
 	@echo 
@@ -12,6 +16,17 @@ print:
 	@echo 'GIO_MAKE_BIN_FSPATH:     $(GIO_MAKE_BIN_FSPATH)'
 	@echo 'GIO_MAKE_BIN:            $(GIO_MAKE_BIN_NAME) installed at : $(shell which $(GIO_MAKE_BIN))'
 
+
+### GIO-MAKE
+
+gio-make-create:
+	# boot strap the repo....
+	gio-make create
+
+gio-make-del:
+	# blow it away
+	rm -rf make
+	rm -rf project
 
 ### GIT
 
