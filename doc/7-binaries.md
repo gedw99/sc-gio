@@ -34,6 +34,8 @@ Tracking
 
 Upgrades
 
+- Need a way request this from the console / GUI.
+
 - You just rerun the Root bootstrap and it will get any new binaires.
   
 - For Insiders you dont have to worry about process slipstreaming or blue / green deployments because NATS will buffer until the binary is replaced. Have to check this is really true in practice. 
