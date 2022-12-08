@@ -20,4 +20,11 @@ The nats-caddy folder has this works to a degree now.
 
 ---
 
-For Insiders, we have 
+For Insiders, the binaries we have binaires with STDIN, STDOUT and STDERROR that Nats can call.
+BTW this makes testing binaries very easy and maintains unix philosphy. 
+We loose type sharing between things, but thats why we have tests. Deck has HEAPS of it.
+
+So we can simply wire up NATS pub sub to call a binary over STD, to allow pipelining.
+The Editor and Deck Renderers use this. The messages are deck AST, XML flying though NATS using im memory ( we dont need disk ). Is fast....
+
+The WASM can be wrireup up to NATS using various mechanisms. We only planned to have them as part of the DB Funcs 

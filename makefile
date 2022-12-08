@@ -3,6 +3,9 @@
 MAKE_FSPATH=$(PWD)/make
 include $(MAKE_FSPATH)/help.mk
 
+# TODO make this relect based :) cant be bother right now to fix...
+GIT_REPO_URL=https://github.com/gedw99/sc-gio
+
 GIO_MAKE_BIN_FSPATH=$(GOPATH)/bin
 GIO_MAKE_BIN_NAME=gio-make
 GIO_MAKE_BIN=$(GIO_MAKE_BIN_FSPATH)/$(GIO_MAKE_BIN_NAME)
