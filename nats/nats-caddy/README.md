@@ -9,6 +9,10 @@ solution
 
 - proxy nats protocol to / from http protocol
 
+## build
+
+follow the makefile ...
+
 ## todo
 
 - add mkcert via caddy.mk include, so that we are running under https
