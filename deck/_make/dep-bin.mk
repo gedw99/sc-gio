@@ -29,6 +29,11 @@ GC_DECK_BIN=$(shell which $(GC_DECK_BIN_NAME))
 INFO_DECK_BIN_NAME=deckinfo
 INFO_DECK_BIN=$(shell which $(INFO_DECK_BIN_NAME))
 
+# https://github.com/ajstarks/kml/tree/master/cmd/world
+WORLD_DECK_BIN_NAME=world
+WORLD_DECK_BIN=$(shell which $(WORLD_DECK_BIN_NAME))
+
+## dep-bin-print
 dep-bin-print:
 	@echo
 	@echo -- Binaries --
@@ -44,8 +49,10 @@ dep-bin-print:
 	@echo "$(FC_DECK_BIN_NAME):               $(FC_DECK_BIN)"
 	@echo "$(GC_DECK_BIN_NAME):               $(GC_DECK_BIN)"
 	@echo "$(INFO_DECK_BIN_NAME):             $(INFO_DECK_BIN)"
+	@echo "$(WORLD_DECK_BIN_NAME):            $(WORLD_DECK_BIN)"
 	@echo
 
+## dep-bin-all
 dep-bin-all:
 	# install Binaries
 
@@ -56,14 +63,16 @@ dep-bin-all:
 	go install github.com/ajstarks/dchart/cmd/dchart@latest  # get the dchart command
 
 	# deck
-	go install github.com/ajstarks/deck/cmd/deckd@latest	# get decksd
-	go install github.com/ajstarks/deck/cmd/pdfdeck@latest  # get pdfdeck to render PDFs
-	go install github.com/ajstarks/deck/cmd/pngdeck@latest	# get pngdeck to render PNGs
-	go install github.com/ajstarks/deck/cmd/svgdeck@latest	# get svgdeck to render SVGs
-	go install github.com/ajstarks/deck/cmd/fcdeck@latest  # get the fcdeck command for Fyne
-	go install github.com/ajstarks/deck/cmd/gcdeck@latest  # get the gcdeck command for GIOUI
-	go install github.com/ajstarks/deck/cmd/deckinfo@latest  # get the deckinfo command
+	go install github.com/ajstarks/deck/cmd/deckd@latest		# get decksd
+	go install github.com/ajstarks/deck/cmd/pdfdeck@latest  	# get pdfdeck to render PDFs
+	go install github.com/ajstarks/deck/cmd/pngdeck@latest		# get pngdeck to render PNGs
+	go install github.com/ajstarks/deck/cmd/svgdeck@latest		# get svgdeck to render SVGs
+	go install github.com/ajstarks/deck/cmd/fcdeck@latest  		# get the fcdeck command for Fyne
+	go install github.com/ajstarks/deck/cmd/gcdeck@latest  		# get the gcdeck command for GIOUI
+	go install github.com/ajstarks/deck/cmd/deckinfo@latest  	# get the deckinfo command
 	
+	go install github.com/ajstarks/kml/cmd/world@latest  	# get the deckinfo command
+## dep-bin-delete
 dep-bin-delete:
 	# delete Binaries
 	
@@ -77,4 +86,6 @@ dep-bin-delete:
 	rm -f $(SVG_DECK_BIN)
 	rm -f $(FC_DECK_BIN)
 	rm -f $(GC_DECK_BIN)
+
+	rm -f $(WORLD_DECK_BIN)
 

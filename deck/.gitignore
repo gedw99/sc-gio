@@ -1,13 +1,17 @@
 .DS_Store 
+.bin
 
 babylonica
 deck
 deckfonts
 decksh
 deckviz
-kml
 dubois-data-portraits
-giocanvas
-
 ex-out
+fonts
+giocanvas
+kml
+
+
+
 

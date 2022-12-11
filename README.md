@@ -1,3 +1,3 @@
 # sc-gio
 
-Editor and Renderer
+Editor and Renderer. work in progress ...

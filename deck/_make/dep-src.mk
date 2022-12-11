@@ -2,34 +2,43 @@
 
 DEP_SRC_BIN_FSPATH=$(SRC_FSPATH)/.bin
 
+## dep-src-print
 dep-src-print:
 	@echo
 	@echo -- Soure --
 	@echo
 	@echo DEP_SRC_BIN_FSPATH: $(DEP_SRC_BIN_FSPATH)
 
-dep-src-all:
+## dep-src-all
+dep-src-all: dep-src-all-delete
+	# fonts
 	cd $(SRC_FSPATH) && git clone git@github.com:googlefonts/babylonica.git
 	cd $(SRC_FSPATH) && git clone git@github.com:ajstarks/deckfonts.git
 	
 	cd $(SRC_FSPATH) && git clone git@github.com:ajstarks/deck.git
 	cd $(SRC_FSPATH) && git clone git@github.com:ajstarks/decksh.git
-	cd $(SRC_FSPATH) && git clone git@github.com:ajstarks/giocanvas.git
 	cd $(SRC_FSPATH) && git clone git@github.com:ajstarks/deckviz.git
-	cd $(SRC_FSPATH) && git clone git@github.com:ajstarks/kml.git
 	cd $(SRC_FSPATH) && git clone git@github.com:ajstarks/dubois-data-portraits.git
+	# ex-out ?
+	# fonts ?
+	cd $(SRC_FSPATH) && git clone git@github.com:ajstarks/giocanvas.git
+	cd $(SRC_FSPATH) && git clone git@github.com:ajstarks/kml.git
 	
-
+	
+## dep-src-all-delete
 dep-src-all-delete:
 	cd $(SRC_FSPATH) && rm -rf ./babylonica
-	cd $(SRC_FSPATH) && rm -rf ./deckfonts
-
+	
 	cd $(SRC_FSPATH) && rm -rf ./deck
+	cd $(SRC_FSPATH) && rm -rf ./deckfonts
 	cd $(SRC_FSPATH) && rm -rf ./decksh
-	cd $(SRC_FSPATH) && rm -rf ./giocanvas
 	cd $(SRC_FSPATH) && rm -rf ./deckviz
-	cd $(SRC_FSPATH) && rm -rf ./kml.git
 	cd $(SRC_FSPATH) && rm -rf ./dubois-data-portraits
+	# ex-out ?
+	# fonts ?
+	cd $(SRC_FSPATH) && rm -rf ./giocanvas
+	cd $(SRC_FSPATH) && rm -rf ./kml
+	
 
 dep-src-build-go:
 	mkdir -p $(DEP_SRC_BIN_FSPATH)

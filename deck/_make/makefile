@@ -1,3 +1,6 @@
+MAKE_FSPATH=$(PWD)/../../make
+include $(MAKE_FSPATH)/help.mk
+
 include ./dep-bin.mk
 include ./dep-src.mk
 
@@ -15,6 +18,8 @@ GO_BIN_FSPATH=$(GOPATH)/bin
 ### example root
 EX_FSPATH=$(SRC_FSPATH)/deckviz
 
+EX_OUT_FSPATH=$(SRC_FSPATH)/ex-out
+
 ### examples specifc
 EX_DECKSH_FSPATH=$(SRC_FSPATH)/dechsh
 EX_ELECTION_FSPATH=$(EX_FSPATH)/2020election
@@ -24,16 +29,18 @@ EX_ASTRO_FSPATH=$(EX_FSPATH)/astrobang
 TEST_FSPATH=$(SRC_FSPATH)/decksh
 
 
+
+
 print:
 	@echo
 	@echo -- Globals
-	@echo "SRC_FSPATH:             $(SRC_FSPATH)"
-	@echo "FONTS_FSPATH:           $(FONTS_FSPATH)"
-	@echo "GO_BIN_FSPATH:          $(GO_BIN_FSPATH)"
+	@echo "SRC_FSPATH:                 $(SRC_FSPATH)"
+	@echo "FONTS_FSPATH:               $(FONTS_FSPATH)"
+	@echo "GO_BIN_FSPATH:              $(GO_BIN_FSPATH)"
 
 	@echo
 	@echo -- test
-	@echo "TEST_FSPATH:           $(TEST_FSPATH)"
+	@echo "TEST_FSPATH:                $(TEST_FSPATH)"
 	
 	@echo
 	@echo -- EX
@@ -49,7 +56,7 @@ print-src:
 	$(MAKE) dep-bin-print
 	$(MAKE) dep-src-print
 
-### fonts
+### FONTS
 
 # https://github.com/go-pdf/fpdf/blob/main/makefont/makefont.go
 # Might be important later i suspect..
@@ -66,11 +73,12 @@ font-test:
 	# https://github.com/googlefonts/babylonica/blob/main/fonts/ttf/Babylonica-Regular.ttf
 	# manually put in deckfonts
 	# it works !!
-	cd $(TEST_FSPATH) && $(PDF_DECK_BIN_NAME) -sans Charter-Italic test.xml && open test.pdf
-	#cd $(TEST_FSPATH) && $(PDF_DECK_BIN_NAME) -sans Babylonica-Regular test.xml && open test.pdf
+	#cd $(TEST_FSPATH) && $(PDF_DECK_BIN_NAME) -sans Charter-Italic test.xml && open test.pdf
+	cd $(TEST_FSPATH) && $(PDF_DECK_BIN_NAME) -sans Babylonica-Regular test.xml && open test.pdf
 	
 ###
 
+## test-bins
 test-bins: test-bins-delete
 	# runs the main test example through all the bins and opens them.
 
@@ -87,6 +95,7 @@ test-bins: test-bins-delete
 	cd $(TEST_FSPATH) && $(PNG_DECK_BIN_NAME) -sans NotoSans-Regular test.xml && open test-00001.png
 	# svg
 	cd $(TEST_FSPATH) && $(SVG_DECK_BIN_NAME) test.xml && open test-00001.svg
+
 test-bins-delete:
 	# clean
 	cd $(TEST_FSPATH) && rm -f test.xml
@@ -104,8 +113,8 @@ decksh-run:
 	rm -rf $(EX_OUT_FSPATH)
 	mkdir -p $(EX_OUT_FSPATH)
 	$(DECKSH_BIN) $(EX_ELECTION_FSPATH)/usmap.dsh > $(EX_OUT_FSPATH)/2020election.xml
-	$(DECKSH_BIN) $(EX_ELECTION_FSPATH)/usmap.dsh | pdfdeck -symbol stateface -pagesize 1600,900 $(EX_OUT_FSPATH)/2020election.xml - > $(EX_OUT_FSPATH)/2020election.pdf
-	$(DECKSH_BIN) $(EX_ELECTION_FSPATH)/usmap.dsh | pngdeck -symbol stateface -pagesize 1600,900 $(EX_OUT_FSPATH)/2020election.xml - > $(EX_OUT_FSPATH)/2020election.png 
+	$(DECKSH_BIN) $(EX_ELECTION_FSPATH)/usmap.dsh | $(PDF_DECK_BIN_NAME) -symbol stateface -pagesize 1600,900 $(EX_OUT_FSPATH)/2020election.xml - > $(EX_OUT_FSPATH)/2020election.pdf
+	$(DECKSH_BIN) $(EX_ELECTION_FSPATH)/usmap.dsh | $(PNG_DECK_BIN_NAME) -symbol stateface -pagesize 1600,900 $(EX_OUT_FSPATH)/2020election.xml - > $(EX_OUT_FSPATH)/2020election.png 
 
 	
 
@@ -166,3 +175,19 @@ infodeck-help:
 infodeck-run:
 	# works - basic though
 	$(INFO_DECK_BIN) $(SRC_FSPATH)/deckviz/2020election/2020election.xml 
+
+kml-run-help:
+	# Convert KML files to deck markup
+	$(WORLD_DECK_BIN) -h
+kml-run-01:
+	# works :)
+	$(WORLD_DECK_BIN) $(SRC_FSPATH)/kml/cmd/world/world.kml | $(PDF_DECK_BIN_NAME) -stdout -pagesize 1600x1000 - > $(EX_OUT_FSPATH)/worldoutline.pdf
+	open $(EX_OUT_FSPATH)/worldoutline.pdf
+kml-run-02:
+	# works :) has colours.
+	$(WORLD_DECK_BIN) -shape=fill -bgcolor=lightblue -color=green $(SRC_FSPATH)/kml/cmd/world/world.kml | $(PDF_DECK_BIN_NAME) -stdout -pagesize 1600x1000 - > $(EX_OUT_FSPATH)/world-02.pdf
+	open $(EX_OUT_FSPATH)/world-02.pdf
+kml-run-03:
+# works :) has colours.
+	$(WORLD_DECK_BIN) -fulldeck -shape=fill -bgcolor=lightblue -color=green $(SRC_FSPATH)/kml/cmd/world/world.kml | $(PDF_DECK_BIN_NAME) -stdout -pagesize 1600x1000 - > $(EX_OUT_FSPATH)/world-03.pdf
+	open $(EX_OUT_FSPATH)/world-03.pdf
