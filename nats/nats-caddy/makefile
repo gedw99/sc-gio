@@ -40,7 +40,7 @@ build:
 ### RUN
 
 run-nats-server:
-	nats-server --config .templates/js.conf
+	nats-server --config .templates/nats.conf
 
 run-caddy:
 	# use template 

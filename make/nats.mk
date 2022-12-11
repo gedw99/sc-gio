@@ -1,24 +1,27 @@
 # NATS BOX ( https://github.com/nats-io/nats-box) 
 # has many of these tools with correct version matrix
 
-# NATS
-# github.com/natsserver/nats
+
+# NATS-SERVER
+# https://github.com/nats-io/nats-server
+NATS_SERVER_BIN_NAME=nats-server
+#NATS_SERVER_BIN_VERSION=v2.4.5
+NATS_SERVER_BIN_VERSION=v2.9.9
 
 # NSC
 # https://github.com/nats-io/nsc
-
-NATS_SERVER_BIN_NAME=nats-server
-#NATS_SERVER_BIN_VERSION=v2.4.5
-NATS_SERVER_BIN_VERSION=v2.9.3
-
 NATS_NSC_BIN_NAME=nsc
-NATS_NSC_BIN_VERSION=2.7.3
+NATS_NSC_BIN_VERSION=2.7.5
 
+# NATS_TOP
+# https://github.com/nats-io/nats-top
 NATS_TOP_BIN_NAME=nats-top
 NATS_TOP_BIN_VERSION=v0.5.3
 
+# NATS
+# https://github.com/nats-io/natscli
 NATS_CLI_BIN_NAME=nats
-NATS_CLI_BIN_VERSION=v0.0.34
+NATS_CLI_BIN_VERSION=v0.0.35
 
 
 # Override variables
