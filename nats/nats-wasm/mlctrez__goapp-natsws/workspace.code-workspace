@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"name": "root",
+			"path": "./"
+		},
+		{
+			"name": "goapp-natsws",
+			"path": "./goapp-natsws"
+		},
+		{
+			"name": "go-app",
+			"path": "./../maxence-charriere__go-app/go-app"
+		}
+	
+	],
+	"settings": {
+		"makefile.extensionOutputFolder": "./.vscode"
+	}
+}

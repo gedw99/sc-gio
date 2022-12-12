@@ -1,0 +1,1 @@
+{"buildTargets":["dep-git","dep-git-del","dep-git-pull","make","mod-tidy","print","run","run-secure"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}

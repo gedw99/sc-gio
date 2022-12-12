@@ -4,6 +4,11 @@ Browser needs a way to call NATS from WASN,
 
 - prefer to not have to use js, etc 
 
+
+based on go-app:
+https://github.com/maxence-charriere/go-app/network/dependents?package_id=UGFja2FnZS0yMjg5NTIyOTAw
+
+
 https://github.com/oderwat started it but 
 - https://github.com/maxence-charriere/go-app/issues/789
 

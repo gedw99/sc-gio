@@ -188,6 +188,12 @@ kml-run-02:
 	$(WORLD_DECK_BIN) -shape=fill -bgcolor=lightblue -color=green $(SRC_FSPATH)/kml/cmd/world/world.kml | $(PDF_DECK_BIN_NAME) -stdout -pagesize 1600x1000 - > $(EX_OUT_FSPATH)/world-02.pdf
 	open $(EX_OUT_FSPATH)/world-02.pdf
 kml-run-03:
-# works :) has colours.
-	$(WORLD_DECK_BIN) -fulldeck -shape=fill -bgcolor=lightblue -color=green $(SRC_FSPATH)/kml/cmd/world/world.kml | $(PDF_DECK_BIN_NAME) -stdout -pagesize 1600x1000 - > $(EX_OUT_FSPATH)/world-03.pdf
-	open $(EX_OUT_FSPATH)/world-03.pdf
+	# works :) is zoomed 
+	$(WORLD_DECK_BIN) -latmin=-20 -latmax=35 -longmin=-100 -longmax=20 -shape=fill -bgcolor=lightsteelblue -color=sienna $(SRC_FSPATH)/kml/cmd/world/world.kml | $(PDF_DECK_BIN_NAME) -stdout -pagesize 1600x900 - > $(EX_OUT_FSPATH)/slave-route.pdf
+	open $(EX_OUT_FSPATH)/slave-route.pdf
+kml-run-04:
+	# deck xml out.
+	$(WORLD_DECK_BIN) $(SRC_FSPATH)/kml/cmd/world/world.kml > $(EX_OUT_FSPATH)/test.xml 
+	# fc and gc deck
+	$(GC_DECK_BIN_NAME) $(EX_OUT_FSPATH)/test.xml
+	#$(FC_DECK_BIN_NAME) $(EX_OUT_FSPATH)/test.xml 

@@ -1,0 +1,13 @@
+
+
+{
+  nats {
+    reply hello GET https://localhost/hello
+  }
+}
+
+localhost {
+  route /hello {
+    respond "Hello, world"
+  }
+}
