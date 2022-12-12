@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"name": "root",
+			"path": "./"
+		},
+		{
+			"name": "go-nats-app",
+			"path": "./go-nats-app"
+		}
+	
+	],
+	"settings": {
+		"makefile.extensionOutputFolder": "./.vscode"
+	}
+}

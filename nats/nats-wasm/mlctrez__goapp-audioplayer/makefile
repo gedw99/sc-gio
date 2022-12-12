@@ -20,6 +20,13 @@ dep-git-pull:
 mod-tidy:
 	cd $(REPO_NAME) && go mod tidy
 
+# ~/Music is where music should be.
+
+music-index:
+	cd $(REPO_NAME) && go run -v music/index/index.go
+music-open:
+	open ~/Music
+
 run:
 	cd $(REPO_NAME) && GIN_MODE=release $(MAKE)
 	# http://localhost:9021
