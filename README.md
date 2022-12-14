@@ -44,3 +44,20 @@ The go-app  project( https://go-app.dev ) that allows building high quality GUI.
 The Deck project ( https://github.com/ajstarks/deck)  that allows GUI to be described in sch as way as to support different rendering targets.
 
 The GIO pluigns ( https://github.com/gioui-plugins/gio-plugins ) that provide the needed OS level GUI integrations.
+
+## Network Topology
+
+The system is a quasi decentralised network:
+
+The NATS Server runs in the LAB. 
+When a new message is published to the NATS Server, it processes the message, does any comptation, and updates the GUI. The GUI is a consumer of the Messages.
+
+The Web Server runs on the Public Cloud.
+It Serves the GUI off the Lab Server. Its acting only as a cache allowing users to interact with the Lab systems via the GUI and NATS Messages.
+
+The GUI runs in the users / scientists Browser
+Its publishes a messages to the NATS Server
+Its allows the different parties to interact.
+
+Other Labs run the same setup, and can publish messages to each others NATS Servers.
+
