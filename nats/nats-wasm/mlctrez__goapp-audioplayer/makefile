@@ -2,8 +2,12 @@
 
 # ex: https://github.com/mlctrez/goapp-audioplayer
 
+# go.mod:
+#//replace github.com/maxence-charriere/go-app/v9 => ../go-app
+#replace github.com/maxence-charriere/go-app/v9 => ../../maxence-charriere__go-app/go-app
+
 REPO_NAME=goapp-audioplayer
-REPO_VERSION=v0.11.17
+REPO_VERSION=v0.11.18
 
 APP_NAME=goapp
 

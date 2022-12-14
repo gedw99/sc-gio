@@ -1,7 +1,11 @@
 # pb
 
-masgup of go-app and PB.
+ g-app and PB have a baby !
 https://github.com/TcMits/pocketadmin
+
+PB GO SDK.
+https://github.com/r--w/pocketbase
+ex: https://github.com/clarkezone/pocketnow
 
 
 famouse WYSIWYG editor in js.

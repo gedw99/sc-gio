@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"name": "root",
+			"path": "./"
+		},
+		{
+			"name": "goapp-mdc",
+			"path": "./goapp-mdc"
+		},
+		{
+			"name": "goapp-mdc-demo",
+			"path": "./goapp-mdc-demo"
+		}
+	
+	],
+	"settings": {
+		"makefile.extensionOutputFolder": "./.vscode"
+	}
+}
