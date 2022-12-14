@@ -24,7 +24,6 @@ The GUI to allow you to edit the source via a WYSIWYG GUI.
 
 When you change something, we rewrite the IDL source and the Renderer redraws.
 
-We are using go-app: https://go-app.dev
 
 ## Renderer
 
@@ -38,4 +37,10 @@ PDF, PNG, SVG, Web.
 
 It allows Single Sourcing in that you can use just the Deck source to output all the Rendering targets at once.
 
-We are grateful for the excellent go-app ( https://go-app.dev ) that allows building high quality GUI.
+## Dependencies
+
+The go-app  project( https://go-app.dev ) that allows building high quality GUI.
+
+The Deck project ( https://github.com/ajstarks/deck)  that allows GUI to be described in sch as way as to support different rendering targets.
+
+The GIO pluigns ( https://github.com/gioui-plugins/gio-plugins ) that provide the needed OS level GUI integrations.
