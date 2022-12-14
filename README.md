@@ -49,13 +49,13 @@ The GIO pluigns ( https://github.com/gioui-plugins/gio-plugins ) that provide th
 
 The system is a quasi decentralised network:
 
-The NATS Server runs in the LAB. 
+The **NATS Server** runs in the LAB. 
 When a new message is published to the NATS Server, it processes the message, does any comptation, and updates the GUI. The GUI is a consumer of the Messages.
 
-The Web Server runs on the Public Cloud.
+The **Web Server** runs on the Public Cloud.
 It Serves the GUI off the Lab Server. Its acting only as a cache allowing users to interact with the Lab systems via the GUI and NATS Messages.
 
-The GUI runs in the users / scientists Browser
+The **GUI** runs in the users / scientists Browser
 Its publishes a messages to the NATS Server
 Its allows the different parties to interact.
 
