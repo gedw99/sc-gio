@@ -24,6 +24,8 @@ The GUI to allow you to edit the source via a WYSIWYG GUI.
 
 When you change something, we rewrite the IDL source and the Renderer redraws.
 
+We are using go-app: https://go-app.dev
+
 ## Renderer
 
 This uses the Deck files as souce. Its event loop is simple in that when the source file changes all files are reprocessed.
@@ -36,3 +38,4 @@ PDF, PNG, SVG, Web.
 
 It allows Single Sourcing in that you can use just the Deck source to output all the Rendering targets at once.
 
+We are grateful for the excellent go-app ( https://go-app.dev ) that allows building high quality GUI.
