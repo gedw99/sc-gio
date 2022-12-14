@@ -2,6 +2,8 @@
 
 This is the main repo of the Open Scince project GUI.
 
+![](logo.png)
+
 Its very much a work in progress as we try approaches out.
 
 Its made up of an Editor and Renderer. 
