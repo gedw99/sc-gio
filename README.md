@@ -1,8 +1,18 @@
 # sc-gio
 
-This is the main repo of the Open Scince project GUI.
+This is the main repo of the Open Science project GUI.
+
 
 ![](logo.png)
+
+## Aims
+
+- Reproducibility: GUI, Logic and Data all in one place, allowing sciences to review eac others work.
+
+- Accessibility: Easy to use, and run locally in your Lab , with a Public Entry point to allow the public to participate.
+
+- Secure: Accounts to control who can see and do what. 
+ 
 
 Its very much a work in progress as we try approaches out.
 
