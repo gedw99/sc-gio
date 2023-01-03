@@ -6,7 +6,7 @@
 		},
 		{
 			"name": "go-nats-app",
-			"path": "./go-nats-app"
+			"path": "./local/go-nats-app"
 		}
 	
 	],

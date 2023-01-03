@@ -11,6 +11,10 @@
 		{
 			"name": "go-app",
 			"path": "./../maxence-charriere__go-app/go-app"
+		},
+		{
+			"name": "mlctrez__goapp-natsws",
+			"path": "./../mlctrez__goapp-natsws/goapp-natsws"
 		}
 	
 	],

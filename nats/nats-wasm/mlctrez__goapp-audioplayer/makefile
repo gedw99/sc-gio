@@ -6,6 +6,8 @@
 #//replace github.com/maxence-charriere/go-app/v9 => ../go-app
 #replace github.com/maxence-charriere/go-app/v9 => ../../maxence-charriere__go-app/go-app
 
+# github.com/mlctrez/goapp-natsws v1.0.2
+
 REPO_NAME=goapp-audioplayer
 REPO_VERSION=v0.11.18
 
