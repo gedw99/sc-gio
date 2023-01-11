@@ -1,0 +1,4 @@
+pipeline:
+  processors:
+    - wasm:
+        module_path: ./uppercase.wasm
